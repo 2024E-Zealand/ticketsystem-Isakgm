@@ -9,10 +9,13 @@ namespace TicketClassLibrary
     public abstract class Vehicle
     {
         private string _licensePlate;
+
         /// <summary>
         /// Får eller sætter nummerpladen på køretøjet. Nummerpladen må ikke være længere end 7 tegn.
         /// </summary>
-        /// <exception cref="ArgumentException">Kastes, hvis nummerpladen er længere end 7 tegn.</exception>
+        /// <exception cref="ArgumentException">
+        /// Kastes, hvis nummerpladen er længere end 7 tegn.
+        /// </exception>
         public string LicensePlate
         {
             get { return _licensePlate; }
@@ -31,8 +34,17 @@ namespace TicketClassLibrary
         /// </summary>
         public DateTime Date { get; set; }
 
+        /// <summary>
+        /// Returnerer standardprisen for køretøjet.
+        /// </summary>
+        /// <returns>Prisen for køretøjet.</returns>
         public abstract double Price();
 
+        /// <summary>
+        /// Beregner prisen med Brobizz-rabat.
+        /// </summary>
+        /// <returns>Prisen for køretøjet med Brobizz-rabat.</returns>
+        public abstract double PriceWithBrobizz();
 
         /// <summary>
         /// Returnerer køretøjstypen.

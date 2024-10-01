@@ -102,6 +102,22 @@ namespace TicketClassLibrary.Tests
                 // Assert
                 Assert.AreEqual("Nummerpladen må ikke være længere end 7 tegn.", ex.Message);
             }
+
+
+        }
+
+        [TestMethod]
+        public void PriceWithBrobizz_ReturnsCorrectDiscountedPrice()
+        {
+            // Arrange
+            var vehicle = new Car(); 
+            double expectedPriceWithBrobizz = 240 - (240 * 0.05); // Beregner den forventede pris med 5% rabat
+
+            // Act
+            double actualPriceWithBrobizz = vehicle.PriceWithBrobizz();
+
+            // Assert
+            Assert.AreEqual(expectedPriceWithBrobizz, actualPriceWithBrobizz, 0.001, "Prisen med Brobizz-rabat er ikke korrekt.");
         }
     }
 }

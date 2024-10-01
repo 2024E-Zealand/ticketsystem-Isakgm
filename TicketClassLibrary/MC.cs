@@ -21,10 +21,21 @@ namespace TicketClassLibrary
         }
 
         /// <summary>
+        /// Beregner prisen med Brobizz-rabat.
+        /// </summary>
+        /// <returns>Prisen efter Brobizz-rabatten er fratrukket.</returns>
+        public override double PriceWithBrobizz()
+        {
+            double price = 125;
+            double priceWithBrobizz = price - (price * 0.05);
+            return priceWithBrobizz;
+        }
+
+        /// <summary>
         /// Returnerer køretøjstypen.
         /// </summary>
         /// <returns>En streng, der repræsenterer køretøjstypen.</returns>
-        
+
 
         public override string VehicleType()
         {

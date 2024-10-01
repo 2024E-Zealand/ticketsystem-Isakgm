@@ -104,5 +104,19 @@ namespace TicketClassLibrary.Tests
             }
 
         }
+
+        [TestMethod]
+        public void PriceWithBrobizz_ReturnsCorrectDiscountedPrice()
+        {
+            // Arrange
+            var vehicle = new MC();
+            double expectedPriceWithBrobizz = 125 - (125 * 0.05); // Beregner den forventede pris med 5% rabat
+
+            // Act
+            double actualPriceWithBrobizz = vehicle.PriceWithBrobizz();
+
+            // Assert
+            Assert.AreEqual(expectedPriceWithBrobizz, actualPriceWithBrobizz, 0.001, "Prisen med Brobizz-rabat er ikke korrekt.");
+        }
     }
 }
