@@ -3,16 +3,6 @@
     public class Car : Vehicle
     {
         /// <summary>
-        /// Får eller sætter nummerpladen på køretøjet.
-        /// </summary>
-        public string LicensePlate { get; set; }
-
-        /// <summary>
-        /// Får eller sætter datoen for transaktionen.
-        /// </summary>
-        public DateTime Date { get; set; }
-
-        /// <summary>
         /// Returnerer prisen for køretøjet.
         /// </summary>
         /// <returns>Prisen for køretøjet.</returns>
