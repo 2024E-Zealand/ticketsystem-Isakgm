@@ -68,7 +68,41 @@ namespace TicketClassLibrary.Tests
             // Assert
             Assert.AreEqual(expectedType, actualType);
         }
-        
-        
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void LicensePlate_ThrowsException_WhenMoreThanSevenCharacters()
+        {
+            // Arrange
+            var vehicle = new MC();
+            string invalidLicensePlate = "AB123456"; // 8 tegn
+
+            // Act
+            vehicle.LicensePlate = invalidLicensePlate;
+
+            // Assert
+            // ExpectedException håndterer assert
+        }
+
+        [TestMethod]
+        public void LicensePlate_ThrowsCorrectMessage_WhenMoreThanSevenCharacters()
+        {
+            // Arrange
+            var vehicle = new MC();
+            string invalidLicensePlate = "ABCDEFGH"; // 8 tegn
+
+            try
+            {
+                // Act
+                vehicle.LicensePlate = invalidLicensePlate;
+                Assert.Fail("No exception was thrown."); // Hvis ingen undtagelse, fejler testen
+            }
+            catch (ArgumentException ex)
+            {
+                // Assert
+                Assert.AreEqual("Nummerpladen må ikke være længere end 7 tegn.", ex.Message);
+            }
+
+        }
     }
 }
