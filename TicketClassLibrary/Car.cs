@@ -1,6 +1,6 @@
 ﻿namespace TicketClassLibrary
 {
-    public class Car
+    public class Car : Vehicle
     {
         /// <summary>
         /// Får eller sætter nummerpladen på køretøjet.
@@ -16,7 +16,7 @@
         /// Returnerer prisen for køretøjet.
         /// </summary>
         /// <returns>Prisen for køretøjet.</returns>
-        public double Price()
+        public override double Price()
         {
             double price = 240;
             return price;
@@ -26,9 +26,9 @@
         /// Returnerer køretøjstypen.
         /// </summary>
         /// <returns>En streng, der repræsenterer køretøjstypen.</returns>
-        public string VehicleType()
+        public override string VehicleType()
         {
-            string car ="Car";
+            string car = "Car";
             return car;
         }
     }

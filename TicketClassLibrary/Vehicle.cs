@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TicketClassLibrary
 {
-    public class MC : Vehicle
+    public abstract class Vehicle
     {
         /// <summary>
         /// Får eller sætter nummerpladen på køretøjet.
@@ -18,28 +18,15 @@ namespace TicketClassLibrary
         /// </summary>
         public DateTime Date { get; set; }
 
-        /// <summary>
-        /// Returnerer prisen for køretøjet.
-        /// </summary>
-        /// <returns>Prisen for køretøjet.</returns>
-        
+        public abstract double Price();
 
-        public override double Price()
-        {
-            double price = 125;
-            return price;
-        }
 
         /// <summary>
         /// Returnerer køretøjstypen.
         /// </summary>
         /// <returns>En streng, der repræsenterer køretøjstypen.</returns>
+        public abstract string VehicleType();
         
 
-        public override string VehicleType()
-        {
-            string mc = "MC";
-            return mc;
-        }
     }
 }
