@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TicketClassLibrary</name>
+    </assembly>
+    <members>
+        <member name="M:TicketClassLibrary.Car.Price">
+            <summary>
+            Returnerer prisen for køretøjet.
+            </summary>
+            <returns>Prisen for køretøjet.</returns>
+        </member>
+        <member name="M:TicketClassLibrary.Car.PriceWithBrobizz">
+            <summary>
+            Beregner prisen med Brobizz-rabat.
+            </summary>
+            <returns>Prisen efter Brobizz-rabatten er fratrukket.</returns>
+        </member>
+        <member name="M:TicketClassLibrary.Car.VehicleType">
+            <summary>
+            Returnerer køretøjstypen.
+            </summary>
+            <returns>En streng, der repræsenterer køretøjstypen.</returns>
+        </member>
+        <member name="M:TicketClassLibrary.MC.Price">
+            <summary>
+            Returnerer prisen for køretøjet.
+            </summary>
+            <returns>Prisen for køretøjet.</returns>
+        </member>
+        <member name="M:TicketClassLibrary.MC.PriceWithBrobizz">
+            <summary>
+            Beregner prisen med Brobizz-rabat.
+            </summary>
+            <returns>Prisen efter Brobizz-rabatten er fratrukket.</returns>
+        </member>
+        <member name="M:TicketClassLibrary.MC.VehicleType">
+            <summary>
+            Returnerer køretøjstypen.
+            </summary>
+            <returns>En streng, der repræsenterer køretøjstypen.</returns>
+        </member>
+        <member name="P:TicketClassLibrary.Vehicle.LicensePlate">
+            <summary>
+            Får eller sætter nummerpladen på køretøjet. Nummerpladen må ikke være længere end 7 tegn.
+            </summary>
+            <exception cref="T:System.ArgumentException">
+            Kastes, hvis nummerpladen er længere end 7 tegn.
+            </exception>
+        </member>
+        <member name="P:TicketClassLibrary.Vehicle.Date">
+            <summary>
+            Får eller sætter datoen for transaktionen.
+            </summary>
+        </member>
+        <member name="M:TicketClassLibrary.Vehicle.Price">
+            <summary>
+            Returnerer standardprisen for køretøjet.
+            </summary>
+            <returns>Prisen for køretøjet.</returns>
+        </member>
+        <member name="M:TicketClassLibrary.Vehicle.PriceWithBrobizz">
+            <summary>
+            Beregner prisen med Brobizz-rabat.
+            </summary>
+            <returns>Prisen for køretøjet med Brobizz-rabat.</returns>
+        </member>
+        <member name="M:TicketClassLibrary.Vehicle.VehicleType">
+            <summary>
+            Returnerer køretøjstypen.
+            </summary>
+            <returns>En streng, der repræsenterer køretøjstypen.</returns>
+        </member>
+    </members>
+</doc>
